@@ -1,0 +1,1 @@
+# EduHackAdjud2025
