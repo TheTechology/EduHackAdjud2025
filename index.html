@@ -36,147 +36,222 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Favicon + theme -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' x='6' font-size='48'%3E💡%3C/text%3E%3C/svg%3E">
+  <!-- Theme & Favicon -->
   <meta name="theme-color" content="#0b1020">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' x='6' font-size='48'%3E💡%3C/text%3E%3C/svg%3E">
 
-  <style>
-    :root{
-      --bg: #090f1f;
-      --bg2:#0d1430;
-      --surface: rgba(255,255,255,0.06);
-      --surface-2: rgba(255,255,255,0.08);
-      --border: rgba(255,255,255,0.12);
-      --text: #e9efff;
-      --muted:#9fb2d8;
-      --primary:#ff7a00;
-      --primary-2:#ff9d3c;
-      --accent:#6ae3ff;
-      --success:#18d47b;
-      --danger:#ff4d4d;
-      --shadow: 0 20px 60px rgba(0,0,0,.35);
-    }
-    *{box-sizing:border-box}
-    html,body{
-      margin:0;padding:0;color:var(--text);
-      background:
-        radial-gradient(1200px 600px at 20% 10%, #162359 0%, transparent 60%),
-        radial-gradient(1000px 500px at 110% -10%, #1b2b66 0%, transparent 60%),
-        linear-gradient(180deg, #060912 0%, #090f1f 100%);
-      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial;
-      -webkit-text-size-adjust:100%;
-      text-size-adjust:100%;
-      overflow-x:hidden; /* previne scroll orizontal pe mobil */
-    }
-    img,svg,video{max-width:100%;height:auto}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1180px;margin:0 auto;padding:24px}
-    header.nav{position:sticky;top:0;z-index:40;background:linear-gradient(180deg, rgba(7,12,26,.9), rgba(7,12,26,.4));backdrop-filter: blur(10px);border-bottom:1px solid var(--border)}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px;min-width:0}
-    .logo{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:conic-gradient(from 210deg,#ff7a00,#ffb300,#ff7a00);box-shadow:0 0 0 2px rgba(255,255,255,.06) inset}
-    nav a{padding:10px 12px;border-radius:10px;white-space:nowrap}
-    nav a:hover{background:var(--surface)}
-    .chip{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:linear-gradient(90deg,var(--surface),transparent);border:1px solid var(--border)}
-    .title{font-size:clamp(32px,4.2vw,56px);line-height:1.05;margin:12px 0;font-weight:900;letter-spacing:-.5px}
-    .lead{font-size:clamp(16px,1.6vw,19px);color:var(--muted)}
-    .cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#ff8a1a,#ff6a00);color:#0b0f1e;font-weight:800;padding:12px 18px;border-radius:14px;box-shadow:0 10px 40px rgba(255,122,0,.4);border:0;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease}
-    .cta:hover{transform:translateY(-1px);box-shadow:0 16px 50px rgba(255,122,0,.5)}
-    .hero .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;min-height:72vh}
-    .panel{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03)); border:1px solid var(--border);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
-    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .kpi{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;text-align:center}
-    .kpi b{font-size:24px}
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" role="banner">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="EduHack Adjud 2025 – Pagina principală">
+        <div class="logo" aria-hidden="true">💡</div>
+        <div>
+          <b>EduHack Adjud 2025</b><br>
+          <small class="muted">Competențe Digitale pentru un Viitor Echitabil</small>
+        </div>
+      </a>
+      <nav aria-label="Navigare principală">
+        <a href="#about">Despre</a>
+        <a href="#objectives">Obiective</a>
+        <a href="#program">Program</a>
+        <a href="#inscriere" class="chip">Înscriere</a>
+      </nav>
+    </div>
+  </header>
 
-    section{margin:64px 0}
-    h2{font-size:clamp(24px,2.6vw,36px);margin:0 0 12px}
-    p{line-height:1.65}
+  <main id="top" class="wrap hero">
+    <div class="grid">
+      <div>
+        <span class="chip">Orange Digital Center • Adjud</span>
+        <h1 class="title">Hackathon educațional & ateliere de <span class="hl">programare vizuală</span> pentru copii 10–14 ani</h1>
+        <p class="lead">Învață Scratch, MakeCode și Code.org prin joc, colaborare și creativitate. Participarea este gratuită, cu prioritate pentru copiii din medii vulnerabile.</p>
+        <div class="kpis" aria-label="Indicatori">
+          <div class="kpi"><b>1–3 nov</b><div>Hackathon (hibrid)</div></div>
+          <div class="kpi"><b>11–30 oct</b><div>Ateliere inițiere</div></div>
+          <div class="kpi"><b>25 locuri</b><div>on-site</div></div>
+          <div class="kpi"><b>3</b><div>platforme: Scratch, MakeCode, Code.org</div></div>
+        </div>
+        <div class="cta-row"><a class="cta" href="#inscriere">Înscrie-te acum</a></div>
+      </div>
 
-    .two{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:start}
-    .timeline{position:relative;padding-left:24px}
-    .timeline:before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(var(--accent), transparent)}
-    .tl-item{position:relative;margin:16px 0;padding:14px 16px;background:var(--surface);border:1px solid var(--border);border-radius:14px}
-    .tl-item:before{content:"";position:absolute;left:-3px;top:18px;width:10px;height:10px;border-radius:999px;background:var(--accent);box-shadow:0 0 0 4px rgba(106,227,255,.15)}
+      <aside class="panel" aria-labelledby="cd-title">
+        <h3 id="cd-title" class="mt0">Cronometru până la închiderea înscrierilor</h3>
+        <div class="count">
+          <div class="unit"><b id="dd">00</b><span>Zile</span></div>
+          <div class="unit"><b id="hh">00</b><span>Ore</span></div>
+          <div class="unit"><b id="mm">00</b><span>Minute</span></div>
+          <div class="unit"><b id="ss">00</b><span>Secunde</span></div>
+        </div>
+        <p class="hint mt10">Închidere înscrieri: <b>23 octombrie 2025, ora 17:00</b> (Europa/București). Hackathon: <b>1–3 noiembrie 2025</b>.</p>
+      </aside>
+    </div>
+  </main>
 
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px}
-    .team{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .member{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px}
+  <section id="about" class="wrap two reveal">
+    <div>
+      <h2>De ce EduHack Adjud 2025?</h2>
+      <p>Proiect educațional derulat de <strong>Asociația Grupul Verde</strong>, dedicat dezvoltării competențelor digitale de bază pentru copiii 10–14 ani prin programare vizuală, activități practice și colaborare internațională.</p>
+      <ul>
+        <li>Ateliere hands-on în <strong>Orange Digital Center Adjud</strong></li>
+        <li>Hackathon de 3 zile, prezentări în fața juriului</li>
+        <li>Integrare în ecosistemul <strong>Digitaliada</strong></li>
+        <li>Format hibrid: local & online (parteneri internaționali)</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3 class="mt0">Public țintă</h3>
+      <p>Copii din Adjud și localitățile rurale din apropiere, cu prioritate pentru cei din medii vulnerabile. Implicăm activ părinți și profesori pentru continuitate.</p>
+      <div class="cards two-cols">
+        <div class="card"><h3>Participanți direcți</h3><p>≥ 25 on-site + participanți online din RO & internațional</p></div>
+        <div class="card"><h3>Beneficiari indirecți</h3><p>100+ părinți, frați, profesori, comunitate</p></div>
+      </div>
+    </div>
+  </section>
 
-    /* --- Modern Form --- */
-    .form{display:grid;gap:12px}
-    .form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .field{position:relative}
-    .input, .select{
-      width:100%; padding:16px 14px 14px; border-radius:14px; color:var(--text);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border:1px solid var(--border); outline:none; transition:border .15s ease, box-shadow .15s ease, background .2s;
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
-      font-size:16px; /* iOS: previne zoom pe focus */
-      touch-action:manipulation;
-    }
-    .input:focus, .select:focus{ border-color:var(--accent); box-shadow:0 0 0 4px rgba(106,227,255,.18) }
-    .floating{
-      position:absolute; left:12px; top:12px; padding:0 6px; background:transparent; color:var(--muted);
-      font-size:14px; transition:transform .15s ease, color .15s ease, background .15s ease;
-      pointer-events:none;
-    }
-    .input:not(:placeholder-shown) + .floating,
-    .input:focus + .floating,
-    .select:focus + .floating{
-      transform: translateY(-14px) scale(.92);
-      background:linear-gradient(180deg, rgba(9,15,31,1), rgba(9,15,31,0));
-      color:#b9c9ee;
-    }
-    .hint{font-size:12px;color:var(--muted);margin-top:6px}
-    .inline{
-      display:flex;gap:10px;align-items:center;padding:10px 12px;border:1px dashed var(--border);border-radius:12px;background:rgba(255,255,255,.03);color:var(--muted);font-size:13px
-    }
-    .status{font-size:13px;margin-top:8px}
-    .status.error{color:var(--danger)}
-    .status.ok{color:var(--success)}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      padding:14px 18px;border-radius:14px;border:0;cursor:pointer;
-      background:linear-gradient(180deg,#ff8a1a,#ff6a00); color:#0b0f1e; font-weight:800;
-      box-shadow:0 10px 36px rgba(255,122,0,.45); transition:transform .15s ease, box-shadow .15s ease, opacity .2s;
-      min-height:48px; /* țintă tactilă confortabilă */
-    }
-    .btn[disabled]{opacity:.6;cursor:not-allowed}
-    .btn:hover{transform:translateY(-1px);box-shadow:0 16px 50px rgba(255,122,0,.55)}
-    .thx{display:none;text-align:center;padding:40px 20px}
-    .thx h3{font-size:2rem;color:var(--primary)}
-    .pill{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04);font-size:12px;color:var(--muted)}
-    .divider{height:1px;background:var(--border);margin:10px 0 6px;opacity:.7}
+  <section id="objectives" class="wrap reveal">
+    <h2>Obiective</h2>
+    <div class="cards three-cols">
+      <div class="card"><h3>Alfabetizare digitală</h3><p>Inițiere în gândirea algoritmică și programare vizuală (Scratch, MakeCode, Code.org).</p></div>
+      <div class="card"><h3>Creativitate & colaborare</h3><p>Lucru în echipă pe proiecte cu aplicabilitate reală, peer-learning și prezentare publică.</p></div>
+      <div class="card"><h3>Incluziune</h3><p>Prioritate pentru copii din medii vulnerabile și implicarea profesorilor ca facilitatori.</p></div>
+    </div>
+  </section>
 
-    footer{margin-top:80px;padding:32px 0;border-top:1px solid var(--border);color:var(--muted)}
-    .reveal{opacity:0; transform:translateY(16px); transition:all .6s ease}
-    .reveal.in{opacity:1; transform:none}
+  <section id="program" class="wrap two reveal">
+    <div>
+      <h2>Program & Etape</h2>
+      <div class="timeline">
+        <div class="tl-item"><b>1–10 octombrie</b> • Organizare, parteneriate, selecție grup-țintă, promovare locală.</div>
+        <div class="tl-item"><b>11–30 octombrie</b> • Ateliere de inițiere în programare vizuală (Scratch, MakeCode, Code.org).</div>
+        <div class="tl-item"><b>1–3 noiembrie</b> • Hackathon EduHack Adjud 2025 (format hibrid) & pitch în fața juriului.</div>
+        <div class="tl-item"><b>4–24 noiembrie</b> • Diseminare, integrare în Digitaliada, promovare rezultate.</div>
+        <div class="tl-item"><b>25 nov – 6 decembrie</b> • Evaluare, măsurare impact & raportare finală.</div>
+      </div>
+    </div>
+    <aside class="panel" aria-labelledby="ce-inveti">
+      <h3 id="ce-inveti" class="mt0">Ce înveți concret</h3>
+      <ul>
+        <li>Creare jocuri & povești interactive în <b>Scratch</b></li>
+        <li>Gândire logică, bucle, condiții, variabile</li>
+        <li>Teamwork, pitch & feedback constructiv</li>
+        <li>Resurse pentru învățare continuă pe <b>Digitaliada</b></li>
+      </ul>
+      <p class="hint">Toate activitățile sunt gratuite. Locurile on-site sunt limitate.</p>
+    </aside>
+  </section>
 
-    /* ====== RESPONSIVE ====== */
-    @media (max-width: 1180px){
-      .wrap{padding:20px}
-    }
-    @media (max-width: 980px){
-      .hero .grid, .two{grid-template-columns:1fr}
-      .kpis{grid-template-columns:repeat(2,1fr)}
-      .cards{grid-template-columns:1fr}
-      .team{grid-template-columns:1fr 1fr}
-      .form .row{grid-template-columns:1fr}
-      /* pliază coloanele din cardul formularului */
-      #inscriere .panel > div { display:grid; grid-template-columns:1fr !important; }
-      /* mută vizual coloana din dreapta sub formular */
-      #inscriere .panel > div > div:last-child { order:2; }
-      #inscriere .panel > div > div:first-child  { order:1; }
-    }
-    @media (max-width: 560px){
-      .kpis{grid-template-columns:1fr}
-      .team{grid-template-columns:1fr}
-      nav{display:flex;gap:8px;overflow:auto}
-      .wrap{padding:16px}
-      .cta{width:100%;justify-content:center}
-    }
-  </style>
+  <!-- === FORMULAR === -->
+  <section id="inscriere" class="wrap reveal">
+    <div class="panel p0">
+      <div class="form-grid">
+        <!-- Left -->
+        <div class="form-col">
+          <div class="pill">Formular de înscriere</div>
+          <h2 class="mt10">Înscrie-te la cursurile gratuite</h2>
+          <p class="hint mt0 mb12">Completează formularul. Confirmăm participarea în max. 2 zile lucrătoare (email/telefon).</p>
+
+          <form id="fsForm" class="form" action="https://formspree.io/f/mqaywpeb" method="POST" novalidate>
+            <div id="formContent">
+              <div class="row">
+                <div class="field">
+                  <input class="input" type="text" name="parinte" id="parinte" placeholder=" " required aria-required="true" autocomplete="name">
+                  <label for="parinte" class="floating">Nume părinte / tutore *</label>
+                </div>
+                <div class="field">
+                  <input class="input" type="text" name="copil" id="copil" placeholder=" " required aria-required="true">
+                  <label for="copil" class="floating">Nume copil *</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="field">
+                  <input class="input" type="number" name="varsta" id="varsta" placeholder=" " min="7" max="16" required aria-required="true">
+                  <label for="varsta" class="floating">Vârsta copilului (7–16) *</label>
+                </div>
+                <div class="field">
+                  <select class="select" name="participare" id="participare" aria-label="Preferință participare">
+                    <option value="On-site">Prefer on-site (Adjud)</option>
+                    <option value="Online">Prefer online</option>
+                    <option value="Hibrid">Indiferent (hibrid)</option>
+                  </select>
+                  <label for="participare" class="floating">Preferință participare</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="field">
+                  <input class="input" type="email" name="email" id="email" placeholder=" " required aria-required="true" autocomplete="email">
+                  <label for="email" class="floating">Email părinte *</label>
+                  <div class="hint">Trimitem confirmarea și detaliile logistice pe email.</div>
+                </div>
+                <div class="field">
+                  <input class="input" type="tel" name="telefon" id="telefon" placeholder=" " required aria-required="true" autocomplete="tel">
+                  <label for="telefon" class="floating">Telefon *</label>
+                </div>
+              </div>
+
+              <label class="inline">
+                <input id="consimtamant" type="checkbox" required aria-required="true" style="accent-color:#ff7a00">
+                <span>Sunt de acord cu prelucrarea datelor în scopul înscrierii.</span>
+              </label>
+
+              <button id="submitBtn" class="btn" type="submit" aria-label="Trimite înscriere">
+                <span id="btnText">Trimite înscriere</span>
+                <span id="btnSpinner">• • •</span>
+              </button>
+              <div id="formMsg" class="status" role="status" aria-live="polite"></div>
+            </div>
+
+            <!-- Thank you -->
+            <div id="thankYou" class="thx" aria-live="polite">
+              <h3>🎉 Îți mulțumim!</h3>
+              <p>Formularul tău de înscriere la <strong>EduHack Adjud 2025</strong> a fost trimis cu succes.</p>
+              <p>Echipa <strong>Asociației Grupul Verde</strong> îți va confirma participarea în maximum 2 zile lucrătoare prin email sau telefon.</p>
+              <p class="hint">Până atunci, verifică inboxul (și folderul Spam/Promo) pentru mesajul de confirmare.</p>
+              <div class="divider"></div>
+              <a class="btn btn--ghost" href="#top">⬅ Înapoi la pagina principală</a>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right -->
+        <div class="info-col">
+          <div class="pill">Beneficii</div>
+          <ul class="benefits">
+            <li>Participare <b>gratuită</b> • locuri limitate</li>
+            <li>Mentorat & activități practice</li>
+            <li>Diplomă de participare</li>
+            <li>Resurse pentru învățare continuă</li>
+          </ul>
+          <div class="pill mt16">Recomandări</div>
+          <p class="hint mt10">Ideal 10–14 ani. Dacă nu ai laptop, poți folosi unul din centru.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- === /FORMULAR === -->
+
+  <section class="wrap reveal" aria-labelledby="faq">
+    <h2 id="faq">Întrebări frecvente</h2>
+    <div class="cards three-cols" role="list">
+      <div class="card" role="listitem"><h3>Costuri?</h3><p>Participarea este <b>gratuită</b>. Proiect susținut în programul SuperCoders 2025.</p></div>
+      <div class="card" role="listitem"><h3>Necesită laptop?</h3><p>Nu neapărat. Spațiul este dotat cu laptopuri; poți aduce și dispozitivul propriu.</p></div>
+      <div class="card" role="listitem"><h3>Certificat / Diplomă?</h3><p>Da, participanții vor primi diplomă de participare și portofoliu cu proiectul realizat.</p></div>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <div class="footer-flex">
+      <div>
+        <div class="chip">Organizator: Asociația Grupul Verde</div>
+        <div class="hint mt8">Contact: <a href="mailto:office@grupulverde.ro">office@grupulverde.ro</a> • <a href="tel:+40374962748">+40 (0374) 962 748</a></div>
+      </div>
+      <div class="hint">© 2025 EduHack Adjud • <a href="#top">Sus</a></div>
+    </div>
+  </footer>
 
   <!-- FAQPage JSON-LD -->
   <script type="application/ld+json">
@@ -202,217 +277,6 @@
     "offers":{"@type":"Offer","price":"0","priceCurrency":"RON","availability":"https://schema.org/InStock","url":"https://eduhackadjud2025.netlify.app/#inscriere"}
   }
   </script>
-</head>
-<body>
-  <header class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="#top" aria-label="EduHack Adjud 2025 – Pagina principală">
-        <div class="logo" aria-hidden="true">💡</div>
-        <div><b>EduHack Adjud 2025</b><br><small class="muted">Competențe Digitale pentru un Viitor Echitabil</small></div>
-      </a>
-      <nav aria-label="Navigare principală">
-        <a href="#about">Despre</a>
-        <a href="#objectives">Obiective</a>
-        <a href="#program">Program</a>
-        <a href="#inscriere" class="chip">Înscriere</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top" class="wrap hero">
-    <div class="grid">
-      <div>
-        <span class="chip">Orange Digital Center • Adjud</span>
-        <h1 class="title">Hackathon educațional & ateliere de <span style="background:linear-gradient(90deg,#ffb300,#ff7a00);-webkit-background-clip:text;background-clip:text;color:transparent">programare vizuală</span> pentru copii 10–14 ani</h1>
-        <p class="lead">Învață Scratch, MakeCode și Code.org prin joc, colaborare și creativitate. Participarea este gratuită, cu prioritate pentru copiii din medii vulnerabile.</p>
-        <div class="kpis" aria-label="Indicatori">
-          <div class="kpi"><b>1–3 nov</b><div>Hackathon (hibrid)</div></div>
-          <div class="kpi"><b>11–30 oct</b><div>Ateliere inițiere</div></div>
-          <div class="kpi"><b>25 locuri</b><div>on-site</div></div>
-          <div class="kpi"><b>3</b><div>platforme: Scratch, MakeCode, Code.org</div></div>
-        </div>
-        <div style="margin-top:20px"><a class="cta" href="#inscriere">Înscrie-te acum</a></div>
-      </div>
-
-      <!-- Countdown & panel -->
-      <aside class="panel" aria-labelledby="cd-title">
-        <h3 id="cd-title" style="margin-top:0">Cronometru până la închiderea înscrierilor</h3>
-        <div style="display:flex;gap:10px">
-          <div class="card kpi" style="flex:1"><b id="dd">00</b><div>Zile</div></div>
-          <div class="card kpi" style="flex:1"><b id="hh">00</b><div>Ore</div></div>
-          <div class="card kpi" style="flex:1"><b id="mm">00</b><div>Minute</div></div>
-          <div class="card kpi" style="flex:1"><b id="ss">00</b><div>Secunde</div></div>
-        </div>
-        <p class="hint" style="margin-top:10px">Închidere înscrieri: <b>23 octombrie 2025, ora 17:00</b> (Europa/București). Hackathon: <b>1–3 noiembrie 2025</b>.</p>
-      </aside>
-    </div>
-  </main>
-
-  <section id="about" class="wrap two reveal">
-    <div>
-      <h2>De ce EduHack Adjud 2025?</h2>
-      <p>Proiect educațional derulat de <strong>Asociația Grupul Verde</strong>, dedicat dezvoltării competențelor digitale de bază pentru copiii 10–14 ani prin programare vizuală, activități practice și colaborare internațională.</p>
-      <ul>
-        <li>Ateliere hands-on în <strong>Orange Digital Center Adjud</strong></li>
-        <li>Hackathon de 3 zile, prezentări în fața juriului</li>
-        <li>Integrare în ecosistemul <strong>Digitaliada</strong></li>
-        <li>Format hibrid: local & online (parteneri internaționali)</li>
-      </ul>
-    </div>
-    <div class="panel">
-      <h3 style="margin-top:0">Public țintă</h3>
-      <p>Copii din Adjud și localitățile rurale din apropiere, cu prioritate pentru cei din medii vulnerabile. Implicăm activ părinți și profesori pentru continuitate.</p>
-      <div class="cards" style="grid-template-columns:1fr 1fr">
-        <div class="card"><h3>Participanți direcți</h3><p>≥ 25 on-site + participanți online din RO & internațional</p></div>
-        <div class="card"><h3>Beneficiari indirecți</h3><p>100+ părinți, frați, profesori, comunitate</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="objectives" class="wrap reveal">
-    <h2>Obiective</h2>
-    <div class="cards">
-      <div class="card"><h3>Alfabetizare digitală</h3><p>Inițiere în gândirea algoritmică și programare vizuală (Scratch, MakeCode, Code.org).</p></div>
-      <div class="card"><h3>Creativitate & colaborare</h3><p>Lucru în echipă pe proiecte cu aplicabilitate reală, peer-learning și prezentare publică.</p></div>
-      <div class="card"><h3>Incluziune</h3><p>Prioritate pentru copii din medii vulnerabile și implicarea profesorilor ca facilitatori.</p></div>
-    </div>
-  </section>
-
-  <section id="program" class="wrap two reveal">
-    <div>
-      <h2>Program & Etape</h2>
-      <div class="timeline">
-        <div class="tl-item"><b>1–10 octombrie</b> • Organizare, parteneriate, selecție grup-țintă, promovare locală.</div>
-        <div class="tl-item"><b>11–30 octombrie</b> • Ateliere de inițiere în programare vizuală (Scratch, MakeCode, Code.org).</div>
-        <div class="tl-item"><b>1–3 noiembrie</b> • Hackathon EduHack Adjud 2025 (format hibrid) & pitch în fața juriului.</div>
-        <div class="tl-item"><b>4–24 noiembrie</b> • Diseminare, integrare în Digitaliada, promovare rezultate.</div>
-        <div class="tl-item"><b>25 nov – 6 decembrie</b> • Evaluare, măsurare impact & raportare finală.</div>
-      </div>
-    </div>
-    <aside class="panel" aria-labelledby="ce-inveti">
-      <h3 id="ce-inveti" style="margin-top:0">Ce înveți concret</h3>
-      <ul>
-        <li>Creare jocuri & povești interactive în <b>Scratch</b></li>
-        <li>Gândire logică, bucle, condiții, variabile</li>
-        <li>Teamwork, pitch & feedback constructiv</li>
-        <li>Resurse pentru învățare continuă pe <b>Digitaliada</b></li>
-      </ul>
-      <p class="hint">Toate activitățile sunt gratuite. Locurile on-site sunt limitate.</p>
-    </aside>
-  </section>
-
-  <!-- === FORMULAR MODERN === -->
-  <section id="inscriere" class="wrap reveal">
-    <div class="panel" style="padding:0">
-      <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:0;align-items:stretch">
-        <!-- Left -->
-        <div style="padding:26px">
-          <div class="pill">Formular de înscriere</div>
-          <h2 style="margin:10px 0 6px">Înscrie-te la cursurile gratuite</h2>
-          <p class="hint" style="margin:0 0 12px">
-            Completează formularul. Confirmăm participarea în max. 2 zile lucrătoare (email/telefon).
-          </p>
-
-          <form id="fsForm" class="form" action="https://formspree.io/f/mqaywpeb" method="POST" novalidate>
-            <div id="formContent">
-              <div class="row">
-                <div class="field">
-                  <input class="input" type="text" name="parinte" id="parinte" placeholder=" " required aria-required="true" autocomplete="name">
-                  <label for="parinte" class="floating">Nume părinte / tutore *</label>
-                </div>
-                <div class="field">
-                  <input class="input" type="text" name="copil" id="copil" placeholder=" " required aria-required="true" autocomplete="on">
-                  <label for="copil" class="floating">Nume copil *</label>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="field">
-                  <input class="input" type="number" name="varsta" id="varsta" placeholder=" " min="7" max="16" required aria-required="true">
-                  <label for="varsta" class="floating">Vârsta copilului (7–16) *</label>
-                </div>
-                <div class="field">
-                  <select class="select" name="participare" id="participare" aria-label="">
-                    <option value="On-site">Prefer on-site (Adjud)</option>
-                    <option value="Online">Prefer online</option>
-                    <option value="Hibrid">Indiferent (hibrid)</option>
-                  </select>
-                  <label for="participare" class="floating"></label>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="field">
-                  <input class="input" type="email" name="email" id="email" placeholder=" " required aria-required="true" autocomplete="email">
-                  <label for="email" class="floating">Email părinte *</label>
-                  <div class="hint">Trimitem confirmarea și detaliile logistice pe email.</div>
-                </div>
-                <div class="field">
-                  <input class="input" type="tel" name="telefon" id="telefon" placeholder=" " required aria-required="true" autocomplete="tel">
-                  <label for="telefon" class="floating">Telefon *</label>
-                </div>
-              </div>
-
-              <div class="inline">
-                <input id="consimtamant" type="checkbox" required aria-required="true" style="accent-color:#ff7a00">
-                <label for="consimtamant">Sunt de acord cu prelucrarea datelor în scopul înscrierii.</label>
-              </div>
-
-              <button id="submitBtn" class="btn" type="submit" aria-label="Trimite înscriere">
-                <span id="btnText">Trimite înscriere</span>
-                <span id="btnSpinner" style="display:none">• • •</span>
-              </button>
-              <div id="formMsg" class="status" role="status" aria-live="polite"></div>
-            </div>
-
-            <!-- Thank you -->
-            <div id="thankYou" class="thx" aria-live="polite">
-              <h3>🎉 Îți mulțumim!</h3>
-              <p>Formularul tău de înscriere la <strong>EduHack Adjud 2025</strong> a fost trimis cu succes.</p>
-              <p>Echipa <strong>Asociației Grupul Verde</strong> îți va confirma participarea în maximum 2 zile lucrătoare prin email sau telefon.</p>
-              <p class="hint">Până atunci, verifică inboxul (și folderul Spam/Promo) pentru mesajul de confirmare.</p>
-              <div class="divider"></div>
-            </div>
-          </form>
-        </div>
-
-        <!-- Right (visual) -->
-        <div style="padding:26px;border-left:1px solid var(--border);background:
-          radial-gradient(800px 400px at 100% 0,#1c2a66 0%, transparent 55%),
-          linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02))">
-          <div class="pill">Beneficii</div>
-          <ul style="margin:12px 0 0 16px;line-height:1.8;color:var(--text)">
-            <li>Participare <b>gratuită</b> • locuri limitate</li>
-            <li>Mentorat & activități practice</li>
-            <li>Diplomă de participare</li>
-            <li>Resurse pentru învățare continuă</li>
-          </ul>
-          <div class="pill" style="margin-top:16px">Recomandări</div>
-          <p class="hint" style="margin:10px 0 0">Ideal 10–14 ani. Dacă nu ai laptop, poți folosi unul din centru.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- === /FORMULAR === -->
-
-  <section class="wrap reveal" aria-labelledby="faq">
-    <h2 id="faq">Întrebări frecvente</h2>
-    <div class="cards" role="list">
-      <div class="card" role="listitem"><h3>Costuri?</h3><p>Participarea este <b>gratuită</b>. Proiect susținut în programul SuperCoders 2025.</p></div>
-      <div class="card" role="listitem"><h3>Necesită laptop?</h3><p>Nu neapărat. Spațiul este dotat cu laptopuri; poți aduce și dispozitivul propriu.</p></div>
-      <div class="card" role="listitem"><h3>Certificat / Diplomă?</h3><p>Da, participanții vor primi diplomă de participare și portofoliu cu proiectul realizat.</p></div>
-    </div>
-  </section>
-
-  <footer class="wrap">
-    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
-      <div>
-        <div class="chip">Organizator: Asociația Grupul Verde</div>
-        <div class="hint" style="margin-top:8px">Contact: <a href="mailto:office@grupulverde.ro">office@grupulverde.ro</a> • <a href="tel:+40374962748">+40 (0374) 962 748</a></div>
-      </div>
-      <div class="hint">© 2025 EduHack Adjud • <a href="#top">Sus</a></div>
-    </div>
-  </footer>
 
   <script>
     // Reveal on scroll
@@ -443,6 +307,7 @@
     const btnText=document.getElementById('btnText');
     const btnSpinner=document.getElementById('btnSpinner');
 
+    // Soft validation
     function validateSoft(){
       const email=document.getElementById('email');
       const tel=document.getElementById('telefon');
@@ -453,12 +318,15 @@
     }
 
     if(fsForm){
+      // ascunde spinner initially
+      if(btnSpinner) btnSpinner.style.display='none';
+
       fsForm.addEventListener('submit', async (e)=>{
         e.preventDefault();
         if(!validateSoft()){ if(formMsg){formMsg.textContent='Verifică emailul și telefonul.'; formMsg.className='status error';} return; }
 
         if(formMsg){formMsg.textContent='Se trimite…'; formMsg.className='status';}
-        if(btn){btn.disabled=true; btnText.style.display='none'; btnSpinner.style.display='inline-block';}
+        if(btn){btn.disabled=true; if(btnText) btnText.style.display='none'; if(btnSpinner) btnSpinner.style.display='inline-block';}
 
         try{
           const data=new FormData(fsForm);
@@ -474,7 +342,7 @@
         }catch(err){
           if(formMsg){formMsg.textContent='Conexiune indisponibilă. Reîncearcă sau scrie-ne la office@grupulverde.ro'; formMsg.className='status error';}
         }finally{
-          if(btn){btn.disabled=false; btnText.style.display='inline-block'; btnSpinner.style.display='none';}
+          if(btn){btn.disabled=false; if(btnText) btnText.style.display='inline-block'; if(btnSpinner) btnSpinner.style.display='none';}
         }
       });
     }
