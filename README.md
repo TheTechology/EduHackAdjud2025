@@ -107,7 +107,7 @@ Acest proiect este open-source și poate fi reutilizat în scop educațional, cu
 🌐 [www.grupulverde.ro](https://grupulverde.ro)  
 📩 [office@grupulverde.ro](mailto:office@grupulverde.ro)  
 📍 Str. Alexandru Ioan Cuza nr. 64, Adjud, Vrancea  
-📞 +40 752 130 020  
+📞  +40 (0374) 962 748  
 
 ---
 
