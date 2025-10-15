@@ -3,16 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EduHack Adjud 2025 – Competențe Digitale pentru un Viitor Echitabil</title>
-  <meta name="description" content="Hackathon educațional & ateliere de programare vizuală (Scratch, MakeCode, Code.org) pentru copii 10–14 ani, Adjud. Organizator: Asociația Grupul Verde.">
+
+  <title>EduHack Adjud 2025 – Hackathon educațional & ateliere de programare vizuală (10–14 ani)</title>
+  <meta name="description" content="Participă la EduHack Adjud 2025: hackathon educațional & ateliere gratuite de programare vizuală (Scratch, MakeCode, Code.org) pentru copii 10–14 ani, la Orange Digital Center Adjud. Înscrieri până la 23 octombrie 2025, ora 17:00.">
+  <meta name="keywords" content="EduHack Adjud 2025,hackathon educațional,programare vizuală,competențe digitale,Scratch,MakeCode,Code.org,Orange Digital Center,Asociația Grupul Verde,Adjud,Vrancea,copii 10–14 ani,educație digitală,ateliere gratuite,SuperCoders,alfabetizare digitală">
+  <meta name="author" content="Asociația Grupul Verde">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <!-- Canonical & hreflang -->
+  <link rel="canonical" href="https://grupulverde.github.io/eduhack-adjud-2025/">
+  <link rel="alternate" href="https://grupulverde.github.io/eduhack-adjud-2025/" hreflang="ro">
+
+  <!-- Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://grupulverde.github.io/eduhack-adjud-2025/">
+  <meta property="og:title" content="EduHack Adjud 2025 – Hackathon educațional & ateliere pentru copii 10–14 ani">
+  <meta property="og:description" content="Dezvoltă competențe digitale prin programare vizuală (Scratch, MakeCode, Code.org). Înscrieri până la 23 octombrie 2025, ora 17:00.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/TheTechology/EduHackAdjud2025/refs/heads/main/Hackathon%20educat%CC%A6ional%20%26%20ateliere%20de%20programare%20vizuala%CC%86%20pentru%20copii%2010%E2%80%9314%20ani.png">
+  <meta property="og:image:alt" content="EduHack Adjud 2025 – Hackathon educațional și ateliere de programare vizuală pentru copii 10–14 ani">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EduHack Adjud 2025 – Hackathon educațional (10–14 ani)">
+  <meta name="twitter:description" content="Ateliere gratuite de programare vizuală & hackathon la Orange Digital Center Adjud. Înscrieri până la 23 octombrie 2025.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/TheTechology/EduHackAdjud2025/refs/heads/main/Hackathon%20educat%CC%A6ional%20%26%20ateliere%20de%20programare%20vizuala%CC%86%20pentru%20copii%2010%E2%80%9314%20ani.png">
+
+  <!-- Pinned icons (optional placeholders) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' x='6' font-size='48'%3E💡%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0b1020">
+
   <style>
     :root{
       --bg: #0b1020;
       --bg2: #0d1326;
-      --primary: #ff7a00; /* Orange vibe */
+      --primary: #ff7a00;
       --accent: #6ae3ff;
       --text: #e8eefc;
       --muted: #9fb2d8;
@@ -36,7 +65,6 @@
     .cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,#ff8a1a,#ff6a00); color:#0b0f1e; font-weight:800; padding:12px 18px; border-radius:14px; box-shadow:0 8px 30px rgba(255,122,0,.35), 0 1px 0 #ffd9b3 inset; border:0; cursor:pointer; transition: transform .15s ease;}
     .cta:hover{transform:translateY(-1px)}
 
-    /* HERO */
     .hero{position:relative;overflow:hidden}
     .hero .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;min-height:72vh}
     .title{font-size:clamp(32px, 4vw, 56px);line-height:1.05;margin:10px 0;font-weight:900;letter-spacing:-0.5px}
@@ -51,49 +79,40 @@
     .kpi{background:var(--glass);border:1px solid var(--border);border-radius:16px;padding:16px;text-align:center}
     .kpi b{font-size:26px}
 
-    /* Sections */
     section{margin:64px 0}
     h2{font-size:clamp(24px,2.8vw,36px);margin:0 0 12px}
     p{line-height:1.65}
 
     .two{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:start}
 
-    /* Timeline */
     .timeline{position:relative;padding-left:24px}
     .timeline:before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(var(--accent),transparent)}
     .tl-item{position:relative;margin:18px 0;padding:14px 16px;background:var(--glass);border:1px solid var(--border);border-radius:14px}
     .tl-item:before{content:"";position:absolute;left:-3px;top:18px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(106,227,255,.15)}
 
-    /* Cards */
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .card{background:var(--glass);border:1px solid var(--border);border-radius:16px;padding:18px}
     .card h3{margin:8px 0}
 
-    /* Team */
     .team{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .member{background:var(--glass);border:1px solid var(--border);border-radius:16px;padding:16px}
     .avatar{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,#1a274a,#0f1734);display:grid;place-items:center;border:1px solid var(--border)}
 
-    /* CTA Banner */
     .cta-banner{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center;background:linear-gradient(180deg, rgba(255,122,0,0.12), rgba(255,255,255,0.04));border:1px solid var(--border);border-radius:20px;padding:24px}
     .cta-form{display:grid;gap:10px}
     .input{border:1px solid var(--border);background:rgba(255,255,255,0.06);border-radius:12px;padding:12px 14px;color:var(--text)}
     .disclaimer{font-size:12px;color:var(--muted)}
 
-    /* Countdown */
     .countdown{display:flex;gap:10px}
     .unit{min-width:80px;padding:12px;border-radius:12px;background:var(--glass);border:1px solid var(--border);text-align:center}
     .unit b{font-family:"JetBrains Mono", monospace; font-size:22px; display:block}
     .unit span{font-size:12px;color:var(--muted)}
 
-    /* Footer */
     footer{margin-top:80px;padding:32px 0;border-top:1px solid var(--border);color:var(--muted)}
 
-    /* Utilities */
     .hide{display:none}
     .tag{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:var(--glass);font-size:12px;color:var(--muted)}
 
-    /* Responsive */
     @media (max-width: 980px){
       .hero .grid, .two, .cta-banner{grid-template-columns:1fr}
       .kpis{grid-template-columns:repeat(2,1fr)}
@@ -104,39 +123,88 @@
       .kpis{grid-template-columns:1fr}
       .team{grid-template-columns:1fr}
     }
-
-    /* Simple reveal animation */
     .reveal{opacity:0; transform: translateY(16px); transition: all .6s ease}
     .reveal.in{opacity:1; transform: none}
   </style>
-  <!-- 🔹 META SEO START -->
-  <meta name="title" content="EduHack Adjud 2025 – Hackathon educațional & ateliere de programare vizuală pentru copii 10–14 ani">
-  <meta name="description" content="Participă la EduHack Adjud 2025 – hackathon educațional și ateliere gratuite de programare vizuală (Scratch, MakeCode, Code.org) organizate de Asociația Grupul Verde, la Orange Digital Center Adjud. Înscrieri până la 23 octombrie 2025, ora 17:00.">
-  <meta name="keywords" content="EduHack Adjud 2025, hackathon educațional, programare vizuală, competențe digitale, Scratch, MakeCode, Code.org, Orange Digital Center, Asociația Grupul Verde, Adjud, Vrancea, copii 10-14 ani, educație digitală, ateliere gratuite, SuperCoders, alfabetizare digitală">
-  <meta name="author" content="Asociația Grupul Verde, office@grupulverde.ro">
-  <meta name="robots" content="index, follow">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://grupulverde.github.io/eduhack-adjud-2025/">
-  <meta property="og:title" content="EduHack Adjud 2025 – Hackathon educațional & ateliere pentru copii 10–14 ani">
-  <meta property="og:description" content="Dezvoltă competențe digitale prin programare vizuală. Participă la EduHack Adjud 2025, un hackathon educațional organizat de Asociația Grupul Verde. Înscrieri până la 23 octombrie 2025.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/TheTechology/Hackathon-educa-ional-ateliere-de-programare-vizual-pentru-copii-10-14-ani/9344df34db4e4cdd04b057f8e6c45d2212c9707d/Hackathon%20educat%CC%A6ional%20%26%20ateliere%20de%20programare%20vizuala%CC%86%20pentru%20copii%2010%E2%80%9314%20ani.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="EduHack Adjud 2025 – Hackathon educațional pentru copii 10–14 ani">
-  <meta name="twitter:description" content="Ateliere gratuite de programare vizuală și hackathon educațional pentru tinerii din Vrancea. Organizator: Asociația Grupul Verde.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/TheTechology/Hackathon-educa-ional-ateliere-de-programare-vizual-pentru-copii-10-14-ani/9344df34db4e4cdd04b057f8e6c45d2212c9707d/Hackathon%20educat%CC%A6ional%20%26%20ateliere%20de%20programare%20vizuala%CC%86%20pentru%20copii%2010%E2%80%9314%20ani.png">
-  <!-- 🔹 META SEO END -->
+
+  <!-- Extra SEO: FAQPage (rich results) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Cât costă participarea?",
+        "acceptedAnswer":{"@type":"Answer","text":"Participarea este gratuită. Proiect susținut în programul SuperCoders 2025."}
+      },
+      {
+        "@type":"Question",
+        "name":"Am nevoie de laptop?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nu neapărat. Spațiul este dotat cu laptopuri; poți aduce și dispozitivul propriu."}
+      },
+      {
+        "@type":"Question",
+        "name":"Primesc certificat de participare?",
+        "acceptedAnswer":{"@type":"Answer","text":"Da, participanții vor primi diplomă de participare și portofoliu cu proiectul realizat."}
+      }
+    ]
+  }
+  </script>
+
+  <!-- Event JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationEvent",
+    "name": "EduHack Adjud 2025 – Hackathon educațional & ateliere de programare vizuală",
+    "startDate": "2025-10-11",
+    "endDate": "2025-11-03",
+    "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Orange Digital Center Adjud",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Str. Alexandru Ioan Cuza 64",
+        "addressLocality": "Adjud",
+        "addressRegion": "Vrancea",
+        "postalCode": "625100",
+        "addressCountry": "RO"
+      }
+    },
+    "image": [
+      "https://raw.githubusercontent.com/TheTechology/EduHackAdjud2025/refs/heads/main/Hackathon%20educat%CC%A6ional%20%26%20ateliere%20de%20programare%20vizuala%CC%86%20pentru%20copii%2010%E2%80%9314%20ani.png"
+    ],
+    "description": "EduHack Adjud 2025 – un hackathon educațional organizat de Asociația Grupul Verde pentru dezvoltarea competențelor digitale ale copiilor de 10–14 ani.",
+    "organizer": {
+      "@type": "Organization",
+      "name": "Asociația Grupul Verde",
+      "email": "office@grupulverde.ro",
+      "url": "https://grupulverde.ro"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "RON",
+      "availability": "https://schema.org/InStock",
+      "url": "https://grupulverde.github.io/eduhack-adjud-2025/#inscriere"
+    }
+  }
+  </script>
 </head>
 <body>
-  <header class="nav">
+  <header class="nav" role="banner">
     <div class="wrap nav-inner">
-      <div class="brand">
+      <a class="brand" href="#top" aria-label="EduHack Adjud 2025 – Pagina principală">
         <div class="logo" aria-hidden="true">💡</div>
         <div>
           <b>EduHack Adjud 2025</b><br>
           <small class="muted">Competențe Digitale pentru un Viitor Echitabil</small>
         </div>
-      </div>
-      <nav>
+      </a>
+      <nav aria-label="Navigare principală">
         <a href="#about">Despre</a>
         <a href="#objectives">Obiective</a>
         <a href="#program">Program</a>
@@ -145,25 +213,25 @@
     </div>
   </header>
 
-  <main class="wrap hero">
+  <main id="top" class="wrap hero">
     <div class="glow" aria-hidden="true"></div>
     <div class="grid">
       <div>
-        <span class="chip badge">Orange Digital Center • Adjud</span>
+        <span class="chip badge" aria-label="Locație: Orange Digital Center, Adjud">Orange Digital Center • Adjud</span>
         <h1 class="title">Hackathon educațional & ateliere de <span style="background:linear-gradient(90deg,#ffb300,#ff7a00);-webkit-background-clip:text;background-clip:text;color:transparent">programare vizuală</span> pentru copii 10–14 ani</h1>
         <p class="lead">Învață Scratch, MakeCode și Code.org prin joc, colaborare și creativitate. Participarea este gratuită, cu prioritate pentru copiii din medii vulnerabile.</p>
-        <div class="stat">
-          <div class="card"><b>1–3 nov</b><br><span class="muted">Hackathon (hibrid)</span></div>
-          <div class="card"><b>11–30 oct</b><br><span class="muted">Ateliere de inițiere</span></div>
-          <div class="card"><b>Adjud</b><br><span class="muted">Str. A.I. Cuza 64</span></div>
+        <div class="stat" role="list" aria-label="Repere eveniment">
+          <div class="card" role="listitem"><b>1–3 nov</b><br><span class="muted">Hackathon (hibrid)</span></div>
+          <div class="card" role="listitem"><b>11–30 oct</b><br><span class="muted">Ateliere de inițiere</span></div>
+          <div class="card" role="listitem"><b>Adjud</b><br><span class="muted">Str. A.I. Cuza 64</span></div>
         </div>
         <div style="margin-top:22px; display:flex; gap:12px; align-items:center">
-          <button class="cta" onclick="document.getElementById('inscriere').scrollIntoView({behavior:'smooth'})">⇨ Înscrie-te la curs</button>
+          <button class="cta" onclick="document.getElementById('inscriere').scrollIntoView({behavior:'smooth'})" aria-label="Înscrie-te la curs">⇨ Înscrie-te la curs</button>
           <span class="tag">Locuri limitate: 25 on-site</span>
         </div>
       </div>
-      <div class="panel">
-        <h3 style="margin-top:0">Cronometru până la închiderea înscrierilor</h3>
+      <aside class="panel" aria-labelledby="cd-title">
+        <h3 id="cd-title" style="margin-top:0">Cronometru până la închiderea înscrierilor</h3>
         <div class="countdown" id="countdown" aria-live="polite">
           <div class="unit"><b id="dd">00</b><span>Zile</span></div>
           <div class="unit"><b id="hh">00</b><span>Ore</span></div>
@@ -171,24 +239,24 @@
           <div class="unit"><b id="ss">00</b><span>Secunde</span></div>
         </div>
         <p class="disclaimer">Închidere înscrieri: <b>23 octombrie 2025, ora 17:00</b> (Europa/București). Hackathon: <b>1–3 noiembrie 2025</b>.</p>
-        <div class="kpis">
-          <div class="kpi"><b>50+</b><div>copii formați</div></div>
-          <div class="kpi"><b>5</b><div>profesori facilitatori</div></div>
-          <div class="kpi"><b>3</b><div>platforme: Scratch, MakeCode, Code.org</div></div>
-          <div class="kpi"><b>Hibrid</b><div>fizic + online</div></div>
+        <div class="kpis" role="list" aria-label="Indicatori">
+          <div class="kpi" role="listitem"><b>50+</b><div>copii formați</div></div>
+          <div class="kpi" role="listitem"><b>5</b><div>profesori facilitatori</div></div>
+          <div class="kpi" role="listitem"><b>3</b><div>platforme: Scratch, MakeCode, Code.org</div></div>
+          <div class="kpi" role="listitem"><b>Hibrid</b><div>fizic + online</div></div>
         </div>
-      </div>
+      </aside>
     </div>
   </main>
 
   <section id="about" class="wrap two reveal">
     <div>
       <h2>De ce EduHack Adjud 2025?</h2>
-      <p>Proiect educațional derulat de <b>Asociația Grupul Verde</b>, dedicat dezvoltării competențelor digitale de bază pentru copiii 10–14 ani prin programare vizuală, activități practice și colaborare internațională. Scopul: acces echitabil la educație digitală și șanse reale pentru viitor.</p>
+      <p>Proiect educațional derulat de <strong>Asociația Grupul Verde</strong>, dedicat dezvoltării competențelor digitale de bază pentru copiii 10–14 ani prin programare vizuală, activități practice și colaborare internațională. Scopul: acces echitabil la educație digitală și șanse reale pentru viitor.</p>
       <ul>
-        <li>Ateliere hands-on în <b>Orange Digital Center Adjud</b></li>
+        <li>Ateliere hands-on în <strong>Orange Digital Center Adjud</strong></li>
         <li>Hackathon de 3 zile, prezentări în fața juriului</li>
-        <li>Integrare în ecosistemul <b>Digitaliada</b></li>
+        <li>Integrare în ecosistemul <strong>Digitaliada</strong></li>
         <li>Participare hibrid: local & online (parteneri internaționali)</li>
       </ul>
     </div>
@@ -202,26 +270,14 @@
     </div>
   </section>
 
-<section class="wrap reveal" id="seo-content">
-  <h2>EduHack Adjud 2025 – Hackathon educațional & competențe digitale</h2>
-  <p>
-    <strong>EduHack Adjud 2025</strong> este un program inovator de educație digitală, organizat de
-    <strong>Asociația Grupul Verde</strong> la <strong>Orange Digital Center Adjud</strong>, care oferă
-    copiilor cu vârste între 10 și 14 ani oportunitatea de a învăța programare vizuală, gândire logică și colaborare prin
-    platformele <b>Scratch</b>, <b>MakeCode</b> și <b>Code.org</b>.
-  </p>
-  <p>
-    Evenimentul face parte din programul <b>SuperCoders 2025</b> și contribuie la creșterea alfabetizării digitale
-    în rândul tinerilor din județul Vrancea. Participanții vor lucra în echipe, vor dezvolta proiecte creative și
-    vor prezenta soluții inovatoare pentru un viitor echitabil și sustenabil.
-  </p>
-  <p>
-    Înscrierile sunt deschise până la <b>23 octombrie 2025, ora 17:00</b>. Toți participanții primesc certificat de
-    participare și pot continua formarea în cadrul rețelei <b>Digitaliada</b>.
-  </p> 
-</section>
+  <section class="wrap reveal" id="seo-content">
+    <h2>EduHack Adjud 2025 – Hackathon educațional & competențe digitale</h2>
+    <p><strong>EduHack Adjud 2025</strong> este un program inovator de educație digitală, organizat de <strong>Asociația Grupul Verde</strong> la <strong>Orange Digital Center Adjud</strong>, care oferă copiilor cu vârste între 10 și 14 ani oportunitatea de a învăța programare vizuală, gândire logică și colaborare prin platformele <b>Scratch</b>, <b>MakeCode</b> și <b>Code.org</b>.</p>
+    <p>Evenimentul face parte din programul <b>SuperCoders 2025</b> și contribuie la creșterea alfabetizării digitale în rândul tinerilor din județul Vrancea. Participanții vor lucra în echipe, vor dezvolta proiecte creative și vor prezenta soluții inovatoare pentru un viitor echitabil și sustenabil.</p>
+    <p>Înscrierile sunt deschise până la <b>23 octombrie 2025, ora 17:00</b>. Toți participanții primesc certificat de participare și pot continua formarea în cadrul rețelei <b>Digitaliada</b>.</p>
+  </section>
 
-<section id="objectives" class="wrap reveal">
+  <section id="objectives" class="wrap reveal">
     <h2>Obiective</h2>
     <div class="cards">
       <div class="card">
@@ -250,8 +306,8 @@
         <div class="tl-item"><b>25 nov – 6 decembrie</b> • Evaluare, măsurare impact & raportare finală.</div>
       </div>
     </div>
-    <div class="panel">
-      <h3 style="margin-top:0">Ce înveți concret</h3>
+    <aside class="panel" aria-labelledby="ce-inveti">
+      <h3 id="ce-inveti" style="margin-top:0">Ce înveți concret</h3>
       <ul>
         <li>Creare jocuri & povești interactive în <b>Scratch</b></li>
         <li>Gândire logică, bucle, condiții, variabile</li>
@@ -259,29 +315,29 @@
         <li>Resurse pentru învățare continuă pe <b>Digitaliada</b></li>
       </ul>
       <p class="disclaimer">Toate activitățile sunt gratuite. Locurile on-site sunt limitate.</p>
-    </div>
+    </aside>
   </section>
 
-  <section class="wrap reveal">
-    <h2>Echipa & Mentori</h2>
+  <section class="wrap reveal" aria-labelledby="echipa">
+    <h2 id="echipa">Echipa & Mentori</h2>
     <div class="team">
       <div class="member">
-        <div class="avatar">MD</div>
+        <div class="avatar" aria-hidden="true">MD</div>
         <h3 style="margin:10px 0 4px">Marian Dumitru</h3>
         <div class="muted">Coordonator proiect • UX/UI, web, educație digitală</div>
       </div>
       <div class="member">
-        <div class="avatar">RU</div>
+        <div class="avatar" aria-hidden="true">RU</div>
         <h3 style="margin:10px 0 4px">Rosina Uzun</h3>
         <div class="muted">Formator principal • Scratch & MakeCode</div>
       </div>
       <div class="member">
-        <div class="avatar">EP</div>
+        <div class="avatar" aria-hidden="true">EP</div>
         <h3 style="margin:10px 0 4px">Elena P.</h3>
         <div class="muted">Comunicare & vizibilitate</div>
       </div>
       <div class="member">
-        <div class="avatar">YM</div>
+        <div class="avatar" aria-hidden="true">YM</div>
         <h3 style="margin:10px 0 4px">Mentor tânăr</h3>
         <div class="muted">Asistență tehnică & facilitare</div>
       </div>
@@ -291,7 +347,7 @@
   <section id="inscriere" class="wrap cta-banner reveal">
     <div>
       <h2>Înscrie-te la cursurile gratuite</h2>
-      <p>Completează formularul și rezerva-ți locul la ateliere și hackathon. Revenim pe email/telefon cu confirmarea și detaliile logistice.</p>
+      <p>Completează formularul și rezervă-ți locul la ateliere și hackathon. Revenim pe email/telefon cu confirmarea și detaliile logistice.</p>
       <ul>
         <li>Locație: <b>Orange Digital Center Adjud</b>, Str. Alexandru Ioan Cuza 64</li>
         <li>Grupă recomandată: copii 10–14 ani</li>
@@ -299,41 +355,40 @@
       </ul>
     </div>
     <form class="panel cta-form" id="fsForm" action="https://formspree.io/f/mqaywpeb" method="POST">
-      <input required class="input" type="text" placeholder="Nume părinte / tutore" name="parinte">
-      <input required class="input" type="text" placeholder="Nume copil" name="copil">
-      <input required class="input" type="number" min="7" max="16" placeholder="Vârsta copilului" name="varsta">
-      <input required class="input" type="email" placeholder="Email" name="email">
-      <input required class="input" type="tel" placeholder="Telefon" name="telefon">
-      <select class="input" name="participare">
+      <input required class="input" type="text" placeholder="Nume părinte / tutore" name="parinte" aria-label="Nume părinte sau tutore">
+      <input required class="input" type="text" placeholder="Nume copil" name="copil" aria-label="Nume copil">
+      <input required class="input" type="number" min="7" max="16" placeholder="Vârsta copilului" name="varsta" aria-label="Vârsta copilului">
+      <input required class="input" type="email" placeholder="Email" name="email" aria-label="Email">
+      <input required class="input" type="tel" placeholder="Telefon" name="telefon" aria-label="Telefon">
+      <select class="input" name="participare" aria-label="Preferință participare">
         <option>Prefer on-site (Adjud)</option>
         <option>Prefer online</option>
         <option>Indiferent (hibrid)</option>
       </select>
-      <!-- Câmp honeypot anti-spam (ascuns) -->
-      <input type="text" name="_gotcha" style="display:none">
+      <input type="text" name="_gotcha" style="display:none" aria-hidden="true">
       <input type="hidden" name="_subject" value="Înscriere EduHack Adjud 2025">
       <input type="hidden" name="_replyto" value="office@grupulverde.ro">
       <input type="hidden" name="_next" value="https://grupulverde.github.io/multumim.html">
       <label style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--muted)">
-        <input type="checkbox" required> Sunt de acord cu prelucrarea datelor în scopul înscrierii.
+        <input type="checkbox" required aria-label="Acord prelucrare date"> Sunt de acord cu prelucrarea datelor în scopul înscrierii.
       </label>
       <button class="cta" type="submit" aria-label="Trimite înscriere">Trimite înscriere</button>
-      <div id="formMsg" class="disclaimer" role="status"></div>
+      <div id="formMsg" class="disclaimer" role="status" aria-live="polite"></div>
     </form>
   </section>
 
-  <section class="wrap reveal">
-    <h2>Întrebări frecvente</h2>
-    <div class="cards">
-      <div class="card">
+  <section class="wrap reveal" aria-labelledby="faq">
+    <h2 id="faq">Întrebări frecvente</h2>
+    <div class="cards" role="list">
+      <div class="card" role="listitem">
         <h3>Costuri?</h3>
         <p>Participarea este <b>gratuită</b>. Proiect susținut în programul SuperCoders 2025.</p>
       </div>
-      <div class="card">
+      <div class="card" role="listitem">
         <h3>Necesită laptop?</h3>
         <p>Nu neapărat. Spațiul este dotat cu laptopuri; poți aduce și dispozitivul propriu.</p>
       </div>
-      <div class="card">
+      <div class="card" role="listitem">
         <h3>Certificat / Diplomă?</h3>
         <p>Da, participanții vor primi diplomă de participare și portofoliu cu proiectul realizat.</p>
       </div>
@@ -344,22 +399,22 @@
     <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
       <div>
         <div class="chip">Organizator: Asociația Grupul Verde</div>
-        <div class="disclaimer" style="margin-top:8px">Contact: office@grupulverde.ro • 0752 130 020</div>
+        <div class="disclaimer" style="margin-top:8px">Contact: <a href="mailto:office@grupulverde.ro">office@grupulverde.ro</a> • <a href="tel:+40752130020">0752 130 020</a></div>
       </div>
-      <div class="disclaimer">© 2025 EduHack Adjud • Privacy • Terms</div>
+      <div class="disclaimer">© 2025 EduHack Adjud • <a href="#top">Sus</a></div>
     </div>
   </footer>
 
   <script>
-    // Simple reveal on scroll
+    // Reveal on scroll
     const els = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
     }, {threshold: 0.2});
     els.forEach(el=>io.observe(el));
 
-    // Countdown to first workshop: 2025-10-11 10:00 Europe/Bucharest
-    const target = new Date('2025-10-23T14:00:00Z'); // 17:00 Europa/București (UTC+3) – deadline înscrieri
+    // Deadline înscrieri: 2025-10-23 17:00 Europe/Bucharest (UTC+3 => 14:00Z)
+    const target = new Date('2025-10-23T14:00:00Z');
     const dd = document.getElementById('dd');
     const hh = document.getElementById('hh');
     const mm = document.getElementById('mm');
@@ -379,7 +434,6 @@
     tick();
     setInterval(tick,1000);
 
-    // Blochează formularul după deadline
     function lockFormIfDeadlinePassed(){
       const now = new Date();
       if(now >= target){
@@ -399,7 +453,7 @@
     lockFormIfDeadlinePassed();
     setInterval(lockFormIfDeadlinePassed, 1000);
 
-    // Formspree AJAX submit (static hosting friendly)
+    // Formspree AJAX submit
     const fsForm = document.getElementById('fsForm');
     const formMsg = document.getElementById('formMsg');
     if (fsForm){
@@ -408,59 +462,23 @@
         formMsg.textContent = 'Se trimite…';
         try{
           const data = new FormData(fsForm);
-          const endpoint = fsForm.action; // deja setat la /f/mqaywpeb
+          const endpoint = fsForm.action;
           const res = await fetch(endpoint, { method:'POST', body: data, headers: { 'Accept':'application/json' }});
           if (res.ok){
             formMsg.textContent = 'Îți mulțumim! Înscrierea a fost înregistrată. Vei primi confirmarea pe email.';
             formMsg.style.color = 'var(--success)';
             fsForm.reset();
-            // Redirecționare opțională după 1.2s către pagina de mulțumire
             setTimeout(()=>{ window.location.href = 'https://grupulverde.github.io/multumim.html'; }, 1200);
           } else {
             formMsg.textContent = 'A apărut o problemă la trimitere. Te rugăm încearcă din nou.';
             formMsg.style.color = 'var(--danger)';
           }
         }catch(err){
-          formMsg.textContent = 'Conexiune indisponibilă. Îți recomandăm să reîncerci sau să ne scrii la office@grupulverde.ro';
+          formMsg.textContent = 'Conexiune indisponibilă. Reîncearcă sau scrie-ne la office@grupulverde.ro';
           formMsg.style.color = 'var(--danger)';
         }
       });
     }
   </script>
-  <!-- 🔹 JSON-LD structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationEvent",
-    "name": "EduHack Adjud 2025 – Hackathon educațional & ateliere de programare vizuală",
-    "startDate": "2025-10-11",
-    "endDate": "2025-11-03",
-    "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "location": {
-      "@type": "Place",
-      "name": "Orange Digital Center Adjud",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Str. Alexandru Ioan Cuza 64",
-        "addressLocality": "Adjud",
-        "addressRegion": "Vrancea",
-        "postalCode": "625100",
-        "addressCountry": "RO"
-      }
-    },
-    "image": [
-      "
-    ],
-    "description": "EduHack Adjud 2025 – un hackathon educațional organizat de Asociația Grupul Verde pentru dezvoltarea competențelor digitale ale copiilor de 10–14 ani.",
-    "organizer": {
-      "@type": "Organization",
-      "name": "Asociația Grupul Verde",
-      "email": "office@grupulverde.ro",
-      "url": "https://grupulverde.ro"
-    }
-  }
-  </script>
 </body>
-</html>
 </html>
