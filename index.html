@@ -283,7 +283,7 @@
     els.forEach(el=>io.observe(el));
 
     // Countdown: 2025-10-23 17:00 Europe/Bucharest (=14:00Z)
-    const target=new Date('2025-10-23T14:00:00Z');
+    const target=new Date('2025-10-31T14:00:00Z');
     const dd=document.getElementById('dd'),hh=document.getElementById('hh'),mm=document.getElementById('mm'),ss=document.getElementById('ss');
     function tick(){const now=new Date();let s=Math.max(0,Math.floor((target-now)/1000));
       const d=Math.floor(s/86400);s-=d*86400;const h=Math.floor(s/3600);s-=h*3600;const m=Math.floor(s/60);s-=m*60;
